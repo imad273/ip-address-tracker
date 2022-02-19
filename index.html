@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <link rel="stylesheet" href="css/output.css">
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+</head>
+<body class="font-rubik">
+  <section class="h-screen flex flex-col">
+    <div class="bg-red-500 text-white text-center" id="error"></div>
+
+    <div class="relative">
+      <div class="flex-1 px-2 flex flex-col pt-5 md:pt-8 pb-16 md:pb-20 justify-center items-center bg-[url('../images/pattern-bg.png')]">
+        <h1 class="text-3xl text-white font-medium">IP Address Tracker</h1>
+        <div class="flex my-4 rounded-lg overflow-hidden w-full max-w-xl">
+          <input class="px-4 py-2 w-full outline-none" id='search' placeholder='Search for any IP address or domain' />
+          <div class="bg-black flex justify-center items-center px-3">
+            <i class='bx bx-chevron-right text-white cursor-pointer' id="btn"></i>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl mx-2 md:mx-0 absolute bottom-[-95%] sm:bottom-[-20%] md:bottom-[-25%] shadow-mine z-20">
+          <div class="flex flex-col sm:flex-row mx-5 my-2 md:m-5">
+            <div class="px-4 text-center py-1.5 md:py-0 sm:text-left">
+              <span class="text-xs text-gray font-bold uppercase">IP Address</span>
+              <p class="text-dark-gray md:text-2xl font-medium" id="ip-Address">129.78.110.124</p>
+            </div>
+            <div class="hidden sm:block bg-gray w-px my-2"></div>
+            <div class="px-4 text-center py-1 md:py-0 sm:text-left">
+              <span class="text-xs text-gray font-bold uppercase">Location</span>
+              <p class="text-dark-gray md:text-2xl font-medium" id="location">Sydney, AUS</p>
+            </div>
+            <div class="hidden sm:block bg-gray w-px my-2"></div>
+            <div class="px-4 text-center py-1 md:py-0 sm:text-left">
+              <span class="text-xs text-gray font-bold uppercase">Timezone</span>
+              <p class="text-dark-gray md:text-2xl font-medium" id="time">UTC 10:00</p>
+            </div>
+            <div class="hidden sm:block bg-gray w-px my-2"></div>
+            <div class="px-4 text-center py-1 md:py-0 sm:text-left">
+              <span class="text-xs text-gray font-bold uppercase">ISP</span>
+              <p class="text-dark-gray md:text-2xl font-medium" id="company">University of Sydney</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="map" class="z-10"></div>
+
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="./scripts/main.js"></script>
+</body>
+</html>
