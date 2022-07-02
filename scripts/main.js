@@ -15,8 +15,7 @@ L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     maxZoom: 18,
     id: 'mapbox/streets-v11',
     tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'your.mapbox.access.token'
+    zoomOffset: -1
 }).addTo(map);
 
 L.marker([-33.89185, 151.19356]).addTo(map);
