@@ -68,7 +68,6 @@ var company = document.getElementById("company");
 btn.addEventListener("click", async () => {
   const result = await getAddress();
   if(result != undefined) {
-     console.log(result);
      L.marker([result.latitude, result.longitude]).addTo(map);
      map.setView(new L.LatLng(result.latitude, result.longitude), 13);
      ip.innerHTML = result.ip;
